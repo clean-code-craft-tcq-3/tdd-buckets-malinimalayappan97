@@ -3,5 +3,5 @@
 #include "test/catch.hpp"
 
 TEST_CASE("detect range of input array of integers") {
-   REQUIRE(inferBreach(3,5) == 4);
+   REQUIRE(getRangeValues(sampleArray) == 4);
 }
