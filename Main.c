@@ -8,7 +8,7 @@ int getNoOfRValuesInRange(int* array_p,int startRange ,int endRange)
   arrayLength = sizeof(array_p);
   for(int i=0; i< arrayLength ;i++)
   {
-       if(TRUE == checkInRange(int* array_p))
+       if(true == checkInRange(array_p,startRange,endRange))
        {
          valueInRange ++;
        }
@@ -21,15 +21,15 @@ int getNoOfRValuesInRange(int* array_p,int startRange ,int endRange)
   return valueInRange;
 }
 
-bool checkInRange(int* array_p)
+bool checkInRange(int* array_p,int startRange ,int endRange)
 {
   if((array_p[i] >= startRange) && (array_p[i] <= endRange))
   {
-    return TRUE;
+    return true;
   }
   else
   {
-    return FALSE;
+    return false;
   }
 }
         
