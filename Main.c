@@ -8,7 +8,7 @@ int getRangeValues(int* array_p,int startRange ,int endRange)
   arrayLength = sizeof(array_p);
   for(int i=0; i< arrayLength ;i++)
   {
-       if((array_p[i] >= startRange) && (array_p[i] <= endRange))
+       if(TRUE == checkInRange(int* array_p))
        {
          valueInRange ++;
        }
@@ -20,3 +20,16 @@ int getRangeValues(int* array_p,int startRange ,int endRange)
   printf("\n%d-%d,%d",startRange,endRange,valueInRange);
   return valueInRange;
 }
+
+bool checkInRange(int* array_p)
+{
+  if((array_p[i] >= startRange) && (array_p[i] <= endRange))
+  {
+    return TRUE;
+  }
+  else
+  {
+    return FALSE;
+  }
+}
+        
