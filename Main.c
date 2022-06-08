@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int getRangeValues(int* array_p,int startRange ,int endRange)
+int getNoOfRValuesInRange(int* array_p,int startRange ,int endRange)
 {
   int arrayLength =0;
   int valueInRange =0;
