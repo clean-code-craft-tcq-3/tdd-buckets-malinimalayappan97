@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include "main.h"
 
+bool checkInRange(int val,int startRange ,int endRange)
+{
+  if((val >= startRange) && (val <= endRange))
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
+
 int getNoOfRValuesInRange(int* array_p,int startRange ,int endRange)
 {
   int arrayLength =0;
@@ -8,7 +20,7 @@ int getNoOfRValuesInRange(int* array_p,int startRange ,int endRange)
   arrayLength = sizeof(array_p);
   for(int i=0; i< arrayLength ;i++)
   {
-       if(true == checkInRange(array_p,startRange,endRange))
+       if(true == checkInRange(array_p[i],startRange,endRange))
        {
          valueInRange ++;
        }
@@ -19,17 +31,5 @@ int getNoOfRValuesInRange(int* array_p,int startRange ,int endRange)
   }
   printf("\n%d-%d,%d",startRange,endRange,valueInRange);
   return valueInRange;
-}
-
-bool checkInRange(int* array_p,int startRange ,int endRange)
-{
-  if((array_p[i] >= startRange) && (array_p[i] <= endRange))
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  }
 }
         
