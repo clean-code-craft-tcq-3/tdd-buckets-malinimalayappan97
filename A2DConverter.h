@@ -1,1 +1,10 @@
 
+#include <stdio.h>
+#include <stdlib.h>
+#include "math.h"
+#include "main.h"
+
+int getA2DInRangeValue(int* sensorData,int inputBit ,int startRange, int endRange);
+int ConvertToCurrentRange(int bitInput ,int*sensorData);
+Bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps);
+Bool getActualChargeOrDischargeCurrentVaule_10A2D(int*sensorData,int * currentInAmps);
