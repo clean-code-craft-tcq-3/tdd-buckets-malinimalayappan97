@@ -69,6 +69,7 @@ int getA2DInRangeValue(int* sensorData,int inputBit ,int startRange, int endRang
     
     for(int i = 0; i< noOfValues ; i++)
     {
+        printf("\n%d",sensorData[i]);
         currentValue[i] = ConvertToCurrentRange(inputBit ,&sensorData[i]);
     }
     
