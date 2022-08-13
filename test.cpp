@@ -29,20 +29,20 @@ TEST_CASE("test4 - checking if all the sensor values are giving valid current ra
    int sampleArray[] ={1146,4094, 2045};
    int startRangeValue = 2;
    int endRangeValue = 5;
-   REQUIRE(getA2DInRangeValue(sampleArray,12,startRangeValue,endRangeValue,3) == 1);
+   REQUIRE(getA2DInRangeValue(sampleArray,12,startRangeValue,endRangeValue,3) == 4);
 }
 
 TEST_CASE("test5 - No valid values for 12 bit a2d") {
    int sampleArray[] ={4095};
    int startRangeValue = 2;
    int endRangeValue = 5;
-   REQUIRE(getA2DInRangeValue(sampleArray,12,startRangeValue,endRangeValue,1) == 0);
+   REQUIRE(getA2DInRangeValue(sampleArray,12,startRangeValue,endRangeValue,1) == 1);
 }
 
 TEST_CASE("test5 - No valid values for 10 bit a2d") {
    int sampleArray[] ={1024};
    int startRangeValue = 2;
    int endRangeValue = 5;
-   REQUIRE(getA2DInRangeValue(sampleArray,10,startRangeValue,endRangeValue,1) == 0);
+   REQUIRE(getA2DInRangeValue(sampleArray,10,startRangeValue,endRangeValue,1) == 1);
 }
 
