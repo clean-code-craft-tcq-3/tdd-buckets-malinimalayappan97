@@ -26,9 +26,9 @@ bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps)
     if((*sensorData < 4095) &&(*sensorData >=0))
     {
         printf("\n%d",*sensorData);
-        currentvalue = ( (*sensorData / 4094));
-        currentvalue1 = (10  *currentvalue);
-        *currentInAmps = round(currentvalue);
+        currentvalue = (10  * (*sensorData ));
+        currentvalue1 = (currentvalue / 4094));
+        *currentInAmps = round(currentvalue1);
         printf("\n%f",currentvalue);
         printf("\n%f",currentvalue1);
         printf("\n%d",*currentInAmps);
