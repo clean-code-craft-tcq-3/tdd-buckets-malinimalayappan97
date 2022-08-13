@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "CheckRange.h"
 
 bool checkInRange(int val,int startRange ,int endRange)
 {
