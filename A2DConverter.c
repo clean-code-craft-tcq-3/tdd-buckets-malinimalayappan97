@@ -43,7 +43,7 @@ int ConvertToCurrentRange(int bitInput ,int*sensorData)
     
     bool isvalueInRange = 0;
     int currentValue = 0;
-     printf("\n%d",*sensorData);
+
     if(bitInput == 10)
     {
         isvalueInRange =getActualChargeOrDischargeCurrentVaule_10A2D(sensorData,&currentValue);      
