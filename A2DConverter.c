@@ -30,8 +30,8 @@ bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps)
         currentvalue1 = (10  *currentvalue);
         *currentInAmps = round(currentvalue);
         printf("\n%f",*currentvalue);
-        printf("\n%f",*currentvalue1);
-        printf("\n%d",*currentInAmps);
+        printf("\n%f",currentvalue1);
+        printf("\n%d",currentInAmps);
         return 1;
     }
     else
