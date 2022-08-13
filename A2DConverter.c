@@ -22,11 +22,15 @@ bool getActualChargeOrDischargeCurrentVaule_10A2D(int*sensorData,int * currentIn
 bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps)
 {
     float currentvalue = 0.0;
+    float currentvalue1 = 0.0;
     if((*sensorData < 4095) &&(*sensorData >=0))
     {
         printf("\n%d",*sensorData);
-        currentvalue = (10  * (*sensorData / 4094));
+        currentvalue = ( (*sensorData / 4094));
+        currentvalue1 = (10  *currentvalue);
         *currentInAmps = round(currentvalue);
+        printf("\n%f",*currentvalue);
+        printf("\n%f",*currentvalue1);
         printf("\n%d",*currentInAmps);
         return 1;
     }
