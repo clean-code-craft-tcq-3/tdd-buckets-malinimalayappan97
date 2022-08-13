@@ -9,7 +9,7 @@ bool getActualChargeOrDischargeCurrentVaule_10A2D(int*sensorData,int * currentIn
     {
         currentValue = ((30  * (*sensorData)) / 1023);
         CurrentRoundedValue = round(currentValue);
-        *currentInAmps = abs(CurrentRoundedValue - 1023);
+        *currentInAmps = abs(CurrentRoundedValue - 15);
         
         return 1;
     }
