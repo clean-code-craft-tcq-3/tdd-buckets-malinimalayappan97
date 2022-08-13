@@ -67,7 +67,7 @@ int getA2DInRangeValue(int* sensorData,int inputBit ,int startRange, int endRang
     
     for(int i = 0; i< RangeValue ; i++)
     {
-        currentValue[i] = ConvertToCurrentRange(inputBit ,sensorData[i]);
+        currentValue[i] = ConvertToCurrentRange(inputBit ,&sensorData[i]);
     }
     
     noOfValueInRange = getNoOfRValuesInRange(currentValue,startRange ,endRange);
