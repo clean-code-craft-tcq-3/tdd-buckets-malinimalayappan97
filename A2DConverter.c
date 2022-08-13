@@ -63,6 +63,7 @@ int ConvertToCurrentRange(int bitInput ,int*sensorData)
 int getA2DInRangeValue(int* sensorData,int inputBit ,int startRange, int endRange)
 {
     int RangeValue = sizeof(sensorData);
+     printf("\n%d",RangeValue);
     int currentValue[RangeValue] ={0};
     int noOfValueInRange= 0;
     
