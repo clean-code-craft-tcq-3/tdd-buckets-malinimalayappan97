@@ -8,10 +8,13 @@ TEST_CASE("detect set of values  from  specified range within input array of int
    
    int startRangeValue = 2;
    int endRangeValue = 5;
-   REQUIRE(getNoOfRValuesInRange(sampleArray,startRangeValue,endRangeValue) == 5);
+   getA2DInRangeValue(sampleArray,12,startRangeValue,endRangeValue);
+//    REQUIRE( == 5);
    
-   startRangeValue = 10;
-   endRangeValue = 12;
-   REQUIRE(getNoOfRValuesInRange(sampleArray,startRangeValue,endRangeValue) == 3);
+//    startRangeValue = 10;
+//    endRangeValue = 12;
+   //REQUIRE(getNoOfRValuesInRange(sampleArray,startRangeValue,endRangeValue) == 3);
    
 }
+
+
