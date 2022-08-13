@@ -35,15 +35,15 @@ bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps)
 int ConvertToCurrentRange(int bitInput ,int*sensorData)
 {
     
-    bool isvalueInRange;
+    bool isvalueInRange = 0;
     int currentValue = 0;
-    if(bitInput = 10)
+    if(bitInput == 10)
     {
         isvalueInRange =getActualChargeOrDischargeCurrentVaule_10A2D(sensorData,&currentValue); 
         
         
     }
-    else if(bitInput = 12)
+    else if(bitInput == 12)
     {
         isvalueInRange = getActualCurrentvalue_12A2D(sensorData,&currentValue);
     }
@@ -51,7 +51,14 @@ int ConvertToCurrentRange(int bitInput ,int*sensorData)
     {
         
     }
-    return currentValue;
+    if( isvalueInRange == 1)
+    {
+        return currentValue;
+    }
+    else
+    {
+        return -1;
+    }
 }
 int getA2DInRangeValue(int* sensorData,int inputBit ,int startRange, int endRange)
 {
