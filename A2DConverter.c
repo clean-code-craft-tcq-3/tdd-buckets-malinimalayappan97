@@ -43,14 +43,12 @@ int ConvertToCurrentRange(int bitInput ,int*sensorData)
         
         
     }
-    else if(bitInput == 12)
+    else 
     {
+        //(bitInput == 12)
         isvalueInRange = getActualCurrentvalue_12A2D(sensorData,&currentValue);
     }
-    else
-    {
-        
-    }
+
     if( isvalueInRange == 1)
     {
         return currentValue;
