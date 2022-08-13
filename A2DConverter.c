@@ -7,7 +7,7 @@ bool getActualChargeOrDischargeCurrentVaule_10A2D(int*sensorData,int * currentIn
     
     if((*sensorData < 1024)&&(*sensorData >=0))
     {
-        currentValue = (30  *( *sensorData / 1023));
+        currentValue = ((30  * (*sensorData)) / 1023);
         CurrentRoundedValue = round(currentValue);
         *currentInAmps = abs(CurrentRoundedValue - 1023);
         
@@ -25,13 +25,10 @@ bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps)
     float currentvalue1 = 0.0;
     if((*sensorData < 4095) &&(*sensorData >=0))
     {
-        printf("\n%d",*sensorData);
         currentvalue = (10  * (*sensorData ));
         currentvalue1 = (currentvalue / 4094);
         *currentInAmps = round(currentvalue1);
-        printf("\n%f",currentvalue);
-        printf("\n%f",currentvalue1);
-        printf("\n%d",*currentInAmps);
+        
         return 1;
     }
     else
@@ -49,9 +46,7 @@ int ConvertToCurrentRange(int bitInput ,int*sensorData)
      printf("\n%d",*sensorData);
     if(bitInput == 10)
     {
-        isvalueInRange =getActualChargeOrDischargeCurrentVaule_10A2D(sensorData,&currentValue); 
-        
-        
+        isvalueInRange =getActualChargeOrDischargeCurrentVaule_10A2D(sensorData,&currentValue);      
     }
     else 
     {
