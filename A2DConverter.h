@@ -6,5 +6,5 @@
 
 int getA2DInRangeValue(int* sensorData,int inputBit ,int startRange, int endRange);
 int ConvertToCurrentRange(int bitInput ,int*sensorData);
-Bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps);
-Bool getActualChargeOrDischargeCurrentVaule_10A2D(int*sensorData,int * currentInAmps);
+bool  getActualCurrentvalue_12A2D(int*sensorData,int * currentInAmps);
+bool getActualChargeOrDischargeCurrentVaule_10A2D(int*sensorData,int * currentInAmps);
